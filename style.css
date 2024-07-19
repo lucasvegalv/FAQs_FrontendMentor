@@ -26,11 +26,11 @@
 
   --fs-small: 0.785rem;
   --fs-regular: 0.9rem;
-  --fs-big: 1.5rem;
-  --fs-large: 1.75rem;
+  --fs-big: 1.75rem;
+  --fs-large: 2.75rem;
 
   --ff-regular: "Work Sans", sans-serif;
-  ;
+  
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -67,7 +67,7 @@ html {
 .card {
   background-color: var(--clr-white);
   width: 300px;
-  height: 70vh;
+  height: 65vh;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
@@ -81,6 +81,7 @@ html {
   width: 85%;
   height: 100%;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .card-heading-container {
@@ -97,7 +98,7 @@ html {
 }
 
 .header-title {
-  font-size: var(--fs-large);
+  font-size: var(--fs-big);
   font-weight: var(--fw-bold);
 }
 
@@ -112,6 +113,10 @@ html {
   margin-bottom: 0.25rem;
 }
 
+.faq-4 {
+  border-bottom: none;
+}
+
 .faq-header-container {
   display: flex;
   justify-content: space-between;
@@ -122,6 +127,7 @@ html {
 .minus-icon {
   object-fit: cover;
   height: 25px;
+  cursor: pointer;
 }
 
 
@@ -133,8 +139,23 @@ html {
 .answer {
   font-size: var(--fs-small);
   font-weight: var(--fw-semibold);
-  opacity: 35%;
+  opacity: 40%;
   text-align: left;
-  margin: 0 0 1.25rem 0;
+  margin: 0 0 1.25rem 0; 
   display: none;
+}
+
+.answer-1 {
+  display: block;
+}
+
+@media (min-width: 750px) {
+  .card {
+    width: 500px;
+    height: 450px;
+  }
+
+  .header-title {
+    font-size: var(--fs-large);
+  }
 }
