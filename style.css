@@ -19,16 +19,18 @@
 */
 
 :root {
-  --clr-white: ;
-  --clr-lightpink: ;
-  --clr-grayish-purple: ;
-  --clr-dark-purple: ;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-lightpink: hsl(275, 100%, 97%);
+  --clr-grayish-purple: hsl(292, 16%, 49%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
 
-  --fs-small: 0.85rem;
-  --fs-regular: 1rem;
+  --fs-small: 0.785rem;
+  --fs-regular: 0.9rem;
   --fs-big: 1.5rem;
+  --fs-large: 1.75rem;
 
-  --ff-regular: "Work Sans", sans-serif;;
+  --ff-regular: "Work Sans", sans-serif;
+  ;
 
   --fw-light: 300;
   --fw-regular: 400;
@@ -38,8 +40,101 @@
   --fw-black: 900;
 }
 
-body, html {
-  margin: 0 auto;
-  height: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
   font-family: var(--ff-regular);
+  background-color: var(--clr-lightpink);
+}
+
+
+/* BACKGROUND IMAGE */
+.background-container {
+  width: 100%;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MAIN CARD */
+.card {
+  background-color: var(--clr-white);
+  width: 300px;
+  height: 70vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 20%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.208) 0 0 15rem 0.1rem;
+}
+
+.container {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card-heading-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-icon {
+  object-fit: cover;
+  height: 20px;
+  width: 20px;
+}
+
+.header-title {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.faqs-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: -0.75rem;
+}
+
+.faq {
+  border-bottom: solid 2px rgba(0, 0, 0, 0.025);
+  margin-bottom: 0.25rem;
+}
+
+.faq-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plus-icon,
+.minus-icon {
+  object-fit: cover;
+  height: 25px;
+}
+
+
+.question {
+  font-size: var(--fs-regular);
+  text-align: left;
+}
+
+.answer {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  opacity: 35%;
+  text-align: left;
+  margin: 0 0 1.25rem 0;
+  display: none;
 }
